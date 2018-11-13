@@ -57,6 +57,42 @@ section {
 }
 
 section.works {
+  div.works-list {
+    overflow: hidden;
+    height: 150px;
+    width: 100vw;
+    ul {
+      height: 100%;
+      width: 100%;
+      list-style: none;
+      overflow-x: auto;
+      overflow-y: hidden;
+      white-space: nowrap;
+      padding-bottom: 50px;
+      font-size: 0px;
+      -webkit-overflow-scrolling: touch;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      li {
+        display: inline-block;
+        width: 200px;
+        height: 150px;
+        font-size: 1rem;
+        padding: 3px;
+        &:first-child {
+          margin: 0 0 0 3px;
+        }
+        &:last-child {
+          margin: 0 3px 0 0;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
 }
 
 section.about {
