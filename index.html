@@ -25,9 +25,21 @@
 <section class="works">
   <h1>Works</h1>
   <div class="works-list">
-    <ul class="clearfix">
-      <li><img src="img/works-default.png"></li>
-      <li><img src="img/works-default.png"></li>
+    <ul class="clearfix" id="works-list">
+      <li
+        data-title='IPSJ-ONE 2018'
+        data-categories='["動画制作"]'
+        data-description='情報処理学会 第80回全国大会（@早稲田大学 西早稲田キャンパス）にて開催された、IPSJ-ONE のテザー動画・ジングル動画・まとめ動画を制作いたしました。'
+        data-url='http://ipsj-one.org/2018/'>
+        <img src="img/works/works-IPSJONE2018.png">
+      </li>
+      <li
+        data-title='IPSJ-ONE 2019'
+        data-categories='["動画制作", "制作中"]'
+        data-description='情報処理学会 第81回全国大会（@福岡大学 七隈キャンパス）にて開催される、IPSJ-ONE のテザー動画・ジングル動画・まとめ動画を制作しております。'
+        data-url='http://ipsj-one.org/'>
+        <img src="img/works/works-IPSJONE2019.png">
+      </li>
       <li><img src="img/works-default.png"></li>
       <li><img src="img/works-default.png"></li>
       <li><img src="img/works-default.png"></li>
@@ -54,7 +66,33 @@
     </ul></dd>
   </dl>
 </section>
+<section class="works-modal" id="works-modal">
+  <div class="works-modal-closer" id="works-modal-closer"></div>
+  <div class="works-modal-container">
+    <img src="img/works-default.png">
+    <div><h1></h1><ul></ul><p></p><span></span></div>
+  </div>
+</section>
 <footer>
   <p class="copyright"><small>&copy; sokendo.studio</small></p>
 </footer>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+<script>
+$("#works-list li").click(function () {
+  if($(this).data("title") != undefined) {
+    $("#works-modal img").attr("src", $(this).children("img").attr("src"));
+    $("#works-modal h1").text($(this).data("title"));
+    $("#works-modal ul").html("<li>" + $(this).data("categories").join("<li>"));
+    $("#works-modal p").text($(this).data("description"));
+    $("#works-modal span").html("<a href='"+$(this).data("url")+"'>" + $(this).data("url") + "</a>");
+    $("#works-modal").show();
+  }
+});
+$("#works-modal-closer").click(function () {
+  $("#works-modal").hide();
+});
+</script>
 </html>
