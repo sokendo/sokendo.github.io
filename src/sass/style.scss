@@ -112,12 +112,20 @@ section.works-modal {
   div.works-modal-closer {
     background: url("../img/ic-close.png") center center no-repeat;
     background-size: 100% 100%;
-    width: 10vw;
-    min-width: 100px;
-    height: auto;
     position: fixed;
-    top: 50px;
-    right: 50px;
+    @media(min-width: 540px) {
+      width: 10vw;
+      min-width: 80px;
+      height: auto;
+      top: 50px;
+      right: 50px;
+    }
+    @media(max-width: 539px) {
+      width: 50px;
+      height: 50px;
+      top: 20px;
+      right: 20px;
+    }
     cursor: pointer;
     &:after {
       content: " ";
@@ -130,24 +138,33 @@ section.works-modal {
   }
   div.works-modal-container {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    height: 600px;
+    @media(min-width: 540px) {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      height: 600px;
+    }
+    @media(max-width: 539px) {
+      top: 90px;
+    }
     img {
       display: block;
+      width: 94%;
+      height: auto;
       max-width: 540px;
-      height: 300px;
+      max-height: 300px;
       margin: 0 auto;
       box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.2);
     }
     div {
+      width: 94%;
+      height: auto;
       max-width: 540px;
       max-height: 300px;
       margin: 30px auto 0;
-      padding: 10px 10px 10px 25px;
+      padding: 10px 20px 10px 25px;
       border: 1px solid #eee;
       border-width: 0 0 0 10px;
       box-sizing: border-box;
@@ -181,6 +198,7 @@ section.works-modal {
         a {
           color: #c5c56a;
           text-decoration: none;
+          padding: 10px;
         }
       }
     }
