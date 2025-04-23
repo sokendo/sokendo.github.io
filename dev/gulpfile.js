@@ -55,7 +55,7 @@ gulp.task("sass", function() {
     .pipe(cleanCSS(cleanCSS_1stSettings))
     .pipe(mmq())
     .pipe(cleanCSS(cleanCSS_2ndSettings))
-    .pipe(gulp.dest("../css/"));
+    .pipe(gulp.dest("../docs/css/"));
 });
 // watch
 gulp.task("watch", (done) => {
