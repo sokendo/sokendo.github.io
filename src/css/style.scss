@@ -1,9 +1,10 @@
 @charset "utf-8";
 
 @import url('https://fonts.googleapis.com/css?family=Rosarivo');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap');
 
 html, body {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+  font-family: "Noto Serif JP", serif;
   font-size: 14px;
   @media(max-width: 500px) {
     font-size: 12px;
@@ -22,54 +23,70 @@ html, body {
 }
 
 header {
-  width: 100vw;
-  height: 100vh;
+  max-width: 1200px;
+  width: 90vw;
+  padding: 150px 5vw 100px;
+  margin: 0 auto;
   img {
-    width: 30vw;
-    min-width: 300px;
-    max-width: 800px;
-    @media(max-width: 500px) {
-      width: 70vw;
-      min-width: 200px;
+    width: 300px;
+    margin: 0 0 0 -15px;
+  }
+  @media(max-width: 540px) {
+    h1 {
+      text-align: center;
     }
-    height: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform:translate(-50%, -50%);
+    img {
+      width: 200px;
+      margin: 0 auto;
+    }
   }
 }
 
+section.mission,
 section.works,
 section.about {
-  width: 100vw;
-  @media(max-width: 300px) {
-    width: 300px;
-  }
-  padding: 50px 0;
-  h1 {
+  max-width: 1200px;
+  width: 90vw;
+  padding: 50px 5vw;
+  margin: 0 auto;
+  h2 {
     font-family: 'Rosarivo', serif;
-    font-size: 3rem;
+    font-size: 2.6rem;
     font-weight: normal;
-    text-align: center;
-    color: #ccc;
+    color: #666;
     margin: 0 0 20px;
   }
-  p {
-    text-align: center;
-    padding: 10px 20px;
+  h3 {
+    font-family: 'Rosarivo', serif;
+    font-size: 2.0rem;
+    font-weight: normal;
     color: #999;
+  }
+  p {
+    text-align: left;
+    padding: 10px 0;
+    color: #999;
+  }
+}
+
+section.mission {
+  span.statement {
+    font-size: 1.6em;
   }
 }
 
 section.works {
   div.works-list {
     height: auto;
-    width: 100vw;
+    width: 100%;
+    margin: 0 0 50px;
+    &:last-child {
+      margin: 0;
+    }
     ul {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: flex-start;
       width: 100%;
       list-style: none;
       font-size: 0px;
@@ -203,12 +220,9 @@ section.about {
     padding: 10px 0;
     dt {
       min-height: 1.5rem;
-      width: 38%;
-      @media(max-width: 500px) {
-        width: 28%;
-      }
+      width: 100px;
       line-height: 1.5rem;
-      margin: 0 0 0 10%;
+      margin: 0;
       padding: 0 0 5px;
       text-align: right;
       float: left;
@@ -216,15 +230,9 @@ section.about {
     }
     dd {
       min-height: 1.5rem;
-      width: 40%;
-      @media(max-width: 500px) {
-        width: 50%;
-      }
+      width: calc(100% - 110px);
       line-height: 1.5rem;
-      margin: 0 0 0 48%;
-      @media(max-width: 500px) {
-        margin: 0 0 0 38%;
-      }
+      margin: 0 0 0 110px;
       padding: 0 0 5px 12px;
       ul li {
         list-style: none;
