@@ -57,12 +57,34 @@ gulp.task("sass", function() {
     .pipe(cleanCSS(cleanCSS_2ndSettings))
     .pipe(gulp.dest("../docs/css/"));
 });
+
+gulp.task("js", function() {
+  return gulp.src("../src/js/*.js")
+    .pipe(plumber())
+    .pipe(strip())
+    .pipe(uglify())
+    .pipe(gulp.dest("../docs/js/"));
+});
+
 // watch
 gulp.task("watch", (done) => {
   gulp.watch("../src/css/*.scss",    gulp.task("sass"));
+  gulp.watch("../src/js/*.js",       gulp.task("js"));
+  done();
+});
+
+gulp.task("serve", (done) => {
+  browser({
+    server: {
+      baseDir: '../docs/',
+    },
+    ghostMode: false,
+    open: 'external',
+    notify: false,
+  });
   done();
 });
 
 // scripts tasks
-gulp.task('default', gulp.parallel('watch'));
+gulp.task('default', gulp.parallel('watch', 'serve'));
 

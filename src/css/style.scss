@@ -109,14 +109,22 @@ section.works {
   }
 }
 
-section.works-modal {
-  display: none;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: white;
+
+dialog.works-modal {
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+  }
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: auto;
+  height: auto;
+  max-width: none;
+  max-height: none;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: transparent;
   div.works-modal-closer {
     background: url("../img/ic-close.png") center center no-repeat;
     background-size: 100% 100%;
@@ -146,13 +154,17 @@ section.works-modal {
   }
   div.works-modal-container {
     position: absolute;
+    background: white;
+    border-radius: 10px;
     @media(min-width: 540px) {
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
+      top: 10%;
+      bottom: 10%;
+      right: 10%;
+      left: 10%;
       margin: auto;
-      height: 600px;
+      height: 80%;
+      width: 80%;
+      max-width: 600px;
     }
     @media(max-width: 539px) {
       top: 90px;
@@ -163,12 +175,11 @@ section.works-modal {
       height: auto;
       max-width: 540px;
       max-height: 300px;
-      margin: 0 auto;
+      margin: 30px auto;
       box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.2);
     }
     div {
-      width: 94%;
-      height: auto;
+      width: 90%;
       max-width: 540px;
       max-height: 300px;
       margin: 30px auto 0;
@@ -177,8 +188,8 @@ section.works-modal {
       border-width: 0 0 0 10px;
       box-sizing: border-box;
       h1 {
-        font-size: 3rem;
-        line-height: 3.2rem;
+        font-size: 2rem;
+        line-height: 2.2rem;
         padding: 0 0 15px;
         color: gray;
       }

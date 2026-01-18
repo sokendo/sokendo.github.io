@@ -19,6 +19,8 @@
 <meta name="twitter:creator" content="@sokendo_studio" />
 <meta name="twitter:image" content="http://sokendo.studio/img/ogp-tw.png" />
 <link rel="stylesheet" href="css/style.css">
+<body>
+<div id="app">
 <header>
   <h1><img src="img/logo.svg" alt="創研堂合同会社 - SOKENDO LLC"></h1>
 </header>
@@ -36,24 +38,27 @@
   <div class="works-list">
     <ul id="works-list">
       <li
+        @click="showModal($event)"
         data-title='レポっと'
         data-categories='["研究成果活用"]'
         data-description='ブラウザだけで動作する市民参加型写真収集システムです。'
         data-url='https://repot.sokendo.studio/'>
-        <img src="img/works/works-repot.png">
+        <img src="img/works/research-repot.png">
       </li>
       <li
+        @click="showModal($event)"
         data-title='にしょロボくん'
         data-categories='["研究成果活用"]'
         data-description='地域のデジタル図鑑を子どもたちが作成することができる、小学生向けのアクティブラーニング教材です。GIGAスクール端末で利用できます（キャラクター： よしだゆうこ）。'
         data-url="https://www.iopt.jp/nishorobo">
-        <img src="img/works/works-nishorobo.png">
+        <img src="img/works/research-nishorobo.png">
       <li
+        @click="showModal($event)"
         data-title='AbaCaaS'
         data-categories='["研究成果活用"]'
         data-description='書画カメラとテーブルトップインタフェースを用いた、そろばん（算盤）の学習支援システムです。画像認識による高精度な入力値推定、苦手に基づく問題集の生成が可能です。'
         data-url="http://research.ubi-lab.com/ja/abacaas/">
-        <img src="img/works/works-abacaas.png">
+        <img src="img/works/research-abacaas.png">
     </ul>
   </div>
   <h3>CivicTech & OpenData</h3>
@@ -61,6 +66,15 @@
   <div class="works-list">
     <ul id="works-list">
       <li
+        @click="showModal($event)"
+        data-title='#桜咲 プロジェクト2026'
+        data-categories='["イベント"]'
+        data-description='全国の桜の位置情報付き写真オープンデータ作成プロジェクト'
+        data-url='https://note.com/yukimat/n/n230284cc3031'>
+        <img src="img/works/event-sakusaku2026.png">
+      </li>
+      <li
+        @click="showModal($event)"
         data-title='#桜咲 プロジェクト2025'
         data-categories='["イベント"]'
         data-description='全国の桜の位置情報付き写真オープンデータ作成プロジェクト'
@@ -74,46 +88,82 @@
   <div class="works-list">
     <ul id="works-list">
       <li
+        @click="showModal($event)"
+        data-title='九州大学 UbiComp/ISWC2025 ビデオアブストラクト制作'
+        data-categories='["動画制作"]'
+        data-description='UbiComp2026に採択された国際会議発表論文（九州大学中村優吾助教他）のビデオアブストラクトを制作いたしました。Ethical Disengagement in Mobile Games: The Effects of Loading Delay and Grayscale on User Engagement（著者： Yugo Nakamura, Ryota Takao, Shogo Fukushima, Yutaka Arakawa）'
+        data-url='https://www.youtube.com/watch?v=b5nBx5AgTb8'>
+        <img src="img/works/creative-movie-flying-gollira.png">
+      </li>
+      <li
+        @click="showModal($event)"
+        data-title='日本たばこ産業株式会社 声遊楽プロジェクト'
+        data-categories='["ロゴ制作"]'
+        data-description='日本たばこ産業株式会社声遊楽プロジェクトのロゴを制作いたしました。'
+        data-url='https://seiyugaku.jp/'>
+        <img src="img/works/creative-logo-seiyugaku.png">
+      </li>
+      <li
+        @click="showModal($event)"
         data-title='奈良女子大学 須藤研究室（Lab4SLC）'
         data-categories='["ロゴ制作"]'
         data-description='奈良女子大学須藤研究室（Lab4SLC）のロゴを制作いたしました。'
         data-url='https://nara-wu-slc.jp/'>
-        <img src="img/works/works-lab4slc-logo.png">
+        <img src="img/works/creative-logo-lab4slc.png">
       </li>
       <li
+        @click="showModal($event)"
         data-title='慶應義塾大学 高道研究室'
         data-categories='["ロゴ制作"]'
         data-description='慶應義塾大学高道研究室のロゴを制作いたしました。'
         data-url='https://takamichi-lab.github.io/'>
-        <img src="img/works/works-takamichi-lab-logo.png">
+        <img src="img/works/creative-logo-takamichi-lab.png">
       </li>
       <li
+        @click="showModal($event)"
         data-title='2023年度福岡未踏的人材発掘・育成コンソーシアム'
         data-categories='["動画制作"]'
         data-description='2023年度福岡未踏的人材発掘・育成コンソーシアムの実施する福岡県在住の若手クリエータを発掘・育成事業に関するプロモーション動画を制作しています。'
         data-url='https://mitou-fukuoka.org/'>
-        <img src="img/works/works-FukuokaAkatsuki.png">
+        <img src="img/works/creative-movie-fukuoka-akatsuki.png">
       </li>
       <li
+        @click="showModal($event)"
         data-title='株式会社mica'
         data-categories='["ロゴ制作"]'
         data-description='株式会社micaのロゴを制作いたしました。'
         data-url='https://www.mica.green/'>
-        <img src="img/works/works-Mica.png">
+        <img src="img/works/creative-logo-mica.png">
+      </li>
+    </ul>
+  </div>
+  <h3>Academic Conference Support</h3>
+  <p>Web制作・印刷物制作・動画制作など、学会開催支援に関する事業を行っています。</p>
+  <div class="works-list">
+    <ul id="works-list">
+      <li
+        @click="showModal($event)"
+        data-title='IEEE PerCom 2019'
+        data-categories='["リーフレット制作"]'
+        data-description='IEEE International Conference on Pervasive Computing and Communications（PerCom 2019）の参加者配布用リーフレットを制作いたしました。（※前身の個人事業における実績です）'
+        data-url='https://web.archive.org/web/20190322164339/http://www.percom.org/'>
+        <img src="img/works/conference-leaflet-percom2019.png">
       </li>
       <li
+        @click="showModal($event)"
         data-title='IPSJ-ONE 2019'
         data-categories='["動画制作"]'
         data-description='情報処理学会 第81回全国大会（@福岡大学 七隈キャンパス）にて開催される、IPSJ-ONE のテザー動画・ジングル動画・まとめ動画を制作いたしました。（※前身の個人事業における実績です）'
         data-url='https://ipsj-one.org/2019/'>
-        <img src="img/works/works-IPSJONE2019.png">
+        <img src="img/works/creative-movie-ipsjone2019.png">
       </li>
       <li
+        @click="showModal($event)"
         data-title='IPSJ-ONE 2018'
         data-categories='["動画制作"]'
         data-description='情報処理学会 第80回全国大会（@早稲田大学 西早稲田キャンパス）にて開催された、IPSJ-ONE のテザー動画・ジングル動画・まとめ動画を制作いたしました。（※前身の個人事業における実績です）'
         data-url='https://ipsj-one.org/2018/'>
-        <img src="img/works/works-IPSJONE2018.png">
+        <img src="img/works/creative-movie-ipsjone2018.png">
       </li>
     </ul>
   </div>
@@ -139,33 +189,31 @@
     </ul></dd>
   </dl>
 </section>
-<section class="works-modal" id="works-modal">
-  <div class="works-modal-closer" id="works-modal-closer"></div>
-  <div class="works-modal-container">
-    <img src="img/works-default.png">
-    <div><h1></h1><ul></ul><p></p><span></span></div>
+<dialog class="works-modal" id="works-modal" @click="closeModal()">
+  <div class="works-modal-closer" @click="closeModal()"></div>
+  <div class="works-modal-container" @click.stop>
+    <img :src="modalContent.img || 'img/works-default.png'" alt="">
+    <div>
+      <h1>${ modalContent.title }</h1>
+      <ul>
+        <li v-for="cat in modalContent.categories">${ cat }</li>
+      </ul>
+      <p>${ modalContent.description }</p>
+      <span><a :href="modalContent.url">${ modalContent.url }</a></span>
+    </div>
   </div>
-</section>
+</dialog>
 <footer>
   <p class="copyright"><small>&copy; SOKENDO LLC</small></p>
 </footer>
-<script
-  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
-  crossorigin="anonymous"></script>
-<script>
-$("#works-list li").click(function () {
-  if($(this).data("title") != undefined) {
-    $("#works-modal img").attr("src", $(this).children("img").attr("src"));
-    $("#works-modal h1").text($(this).data("title"));
-    $("#works-modal ul").html("<li>" + $(this).data("categories").join("<li>"));
-    $("#works-modal p").text($(this).data("description"));
-    $("#works-modal span").html("<a href='"+$(this).data("url")+"'>" + $(this).data("url") + "</a>");
-    $("#works-modal").show();
+</div>
+</body>
+<script type="importmap">
+{
+  "imports": {
+    "vue": "https://unpkg.com/vue@3.3.12/dist/vue.esm-browser.prod.js"
   }
-});
-$("#works-modal-closer").click(function () {
-  $("#works-modal").hide();
-});
+}
 </script>
+<script src="js/main.js?v=20260118" type="module"></script>
 </html>
