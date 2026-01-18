@@ -18,7 +18,7 @@
 <meta name="twitter:site" content="@sokendo_studio" />
 <meta name="twitter:creator" content="@sokendo_studio" />
 <meta name="twitter:image" content="http://sokendo.studio/img/ogp-tw.png" />
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css?v=20260118.1">
 <body>
 <div id="app">
 <header>
@@ -193,7 +193,7 @@
   <div class="works-modal-closer" @click="closeModal()"></div>
   <div class="works-modal-container" @click.stop>
     <img :src="modalContent.img || 'img/works-default.png'" alt="">
-    <div>
+    <div class="works-modal-content">
       <h1>${ modalContent.title }</h1>
       <ul>
         <li v-for="cat in modalContent.categories">${ cat }</li>
@@ -215,5 +215,5 @@
   }
 }
 </script>
-<script src="js/main.js?v=20260118" type="module"></script>
+<script src="js/main.js?v=20260118.1" type="module"></script>
 </html>
